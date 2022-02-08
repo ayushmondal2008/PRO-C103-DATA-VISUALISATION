@@ -1,9 +1,6 @@
 import pandas as pd
 import plotly.express as px
- 
-df = pd.read_csv("covid_scatter.csv")
-fig = px.scatter(df, x="Country", y="cases",
-size = "Percentage", color = "country",
-size_max=60)
- 
+
+data = pd.read_csv("Data.csv")
+fig = px.scatter(data,x="date",y="cases",color="country",title="Covid 19 Cases in world", size ="cases")
 fig.show()
